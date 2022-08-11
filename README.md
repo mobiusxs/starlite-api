@@ -7,6 +7,7 @@ Example API using Starlite with SQLAlchemy and [SQLAlchemy-Mixins](https://githu
 1. Install dependencies
 
     ```
+    python -m venv venv
     pip install -r requirements.txt
     ```
 
