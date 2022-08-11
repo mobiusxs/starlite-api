@@ -3,3 +3,6 @@ sqlalchemy
 sqlalchemy-mixins
 starlite
 uvicorn
+
+flake8
+pytest
