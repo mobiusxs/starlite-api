@@ -2,7 +2,9 @@ alembic
 sqlalchemy
 sqlalchemy-mixins
 starlite
+
 uvicorn
+psycopg2-binary
 
 flake8
 pytest
