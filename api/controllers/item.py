@@ -1,3 +1,5 @@
+from typing import List
+
 from starlite import Controller
 from starlite import delete
 from starlite import get
@@ -13,7 +15,7 @@ class ItemController(Controller):
     tags = ['Item']
 
     @get(path='/', include_in_schema=True, summary='List all Items')
-    async def list(self) -> list[Item]:
+    async def list(self) -> List[Item]:
         """List all Items"""
 
         return ItemModel.all()
