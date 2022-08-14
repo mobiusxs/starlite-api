@@ -23,5 +23,5 @@ openapi_config = OpenAPIConfig(
     description='API Description',
     license=dict(name='MIT', identifier='MIT', url='https://opensource.org/licenses/MIT'),
     summary='API Summary',
-    servers=[{'url': '/'}]
+    servers=[]
 )
