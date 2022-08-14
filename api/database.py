@@ -9,9 +9,9 @@ from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_mixins import AllFeaturesMixin
 
-from .settings import DATABASE_URL
+from api.settings import settings
 
-engine = create_engine(DATABASE_URL, echo=False)
+engine = create_engine(settings.database_url, echo=False)
 session = scoped_session(sessionmaker(bind=engine, autocommit=True))
 metadata = MetaData()
 

@@ -1,3 +1,10 @@
 from os import environ
 
-DATABASE_URL = environ['DATABASE_URL']
+from pydantic import BaseSettings
+
+
+class Settings(BaseSettings):
+    database_url = environ['DATABASE_URL']
+
+
+settings = Settings()
