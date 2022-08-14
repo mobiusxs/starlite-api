@@ -4,6 +4,7 @@ from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import DateTime
 from sqlalchemy import MetaData
+from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
@@ -18,6 +19,10 @@ metadata = MetaData()
 
 class BaseModel(AllFeaturesMixin):
     __abstract__ = True
+
+    @declared_attr
+    def __tablename__(cls):
+        return cls.__name__.lower()
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     modified = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
